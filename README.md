@@ -1,2 +1,2 @@
-# .config
-config files
+# dotfiles
+dot files of the gods
