@@ -1,2 +1,5 @@
 # dotfiles
-dot files of the gods
+dotfiles of the gods
+
+clone repo to ~/git/dotfiles
+run 'create-symlinks.sh'

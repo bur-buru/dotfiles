@@ -1,0 +1,3 @@
+Terminal = eval urxvt
+TermExec = ${Terminal} -e
+

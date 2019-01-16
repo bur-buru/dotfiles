@@ -1,0 +1,13 @@
+XTerm*256color
+XTerm.vt100.locale: true
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+XTerm.vt100.translations: #override \n\
+    Ctrl <Key>M: maximize() \n\
+    Ctrl <Key>R: restore()
+XTerm.vt100.saveLines: 4096
+XTerm.vt100.scrollBar: false
+XTerm.vt100.scrollbar.width: 8
+XTerm.vt100.geometry: 80x22
+XTerm.vt100.selectToClipboard
