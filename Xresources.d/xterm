@@ -1,4 +1,3 @@
-XTerm*256color
 XTerm.vt100.locale: true
 XTerm.vt100.metaSendsEscape: true
 XTerm.vt100.backarrowKey: false
@@ -10,4 +9,4 @@ XTerm.vt100.saveLines: 4096
 XTerm.vt100.scrollBar: false
 XTerm.vt100.scrollbar.width: 8
 XTerm.vt100.geometry: 80x22
-XTerm.vt100.selectToClipboard
+XTerm.vt100.selectToClipboard: true

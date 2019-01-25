@@ -1,8 +1,6 @@
-*font: xft:BitstreamVeraSansMono Nerd Font:pixelsize=10, \
-       xft:Power Line Symbols:size=10,
-
+*font: xft:DejaVuSansMono Nerd Font Mono:pixelsize=11
 xft*antialias: true
-xft*hinting:   true
+xft*hinting: true
 xft*hintstyle: hintfull
-xft*dpi:       96
-xft*rgba:      rgb
+xft*dpi: 96
+xft*rgba: rgb
