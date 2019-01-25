@@ -85,11 +85,12 @@ source /home/$USER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 plugins=(
   powerline
   zsh_reload
-  zsh-autosuggestions
   zsh-256color
   themes
   perl
   git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
   )
 
 # =============================================================================
@@ -109,8 +110,8 @@ source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 #PROMPT='%{$reset_color%}%n %{$fg[green]%}{%{$reset_color%}%~%{$fg[green]%}}%{$reset_color%}$(git_prompt_info)%{$fg[green]%}%{$fg[red]%} $%{$reset_color%} '
 
 # font mode
-POWERLEVEL9K_MODE="nerdfont-complete"
-#POWERLEVEL9K_MODE="awesome-fontconfig"
+#POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_MODE="awesome-fontconfig"
 #POWERLEVEL9K_MODE='awesome-patched'
 # select theme
 #ZSH_THEME="powerlevel9k"
@@ -118,7 +119,6 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 # Customise the Powerlevel9k prompts
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
   custom_arch
-  user
   dir
   vcs
 )
