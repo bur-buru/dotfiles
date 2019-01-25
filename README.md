@@ -6,5 +6,5 @@ clone repo to: <br>
 </code><br>
 exec:<br>
 <code>
-  create-symlinks.sh
+  ./create-symlinks.sh
 </code>
