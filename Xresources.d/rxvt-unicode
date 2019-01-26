@@ -5,10 +5,10 @@ URxvt*scrollBar_right: false
 URxvt*transparent: false
 URxvt*depth: 32
 URxvt*background:      [93]#1d1f21
-URxvt.font: xft:DejaVuSansMono Nerd Font Mono:pixelsize=11
-URxvt.letterSpace: -1
+!URxvt.font: xft:DejaVuSansMono Nerd Font:pixelsize=12
+Rxvt.letterSpace: -1
 *antialias: true
 *autohint: true
-URxvt*perl-ext-common: default,matcher,resize-font
+URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button:  1

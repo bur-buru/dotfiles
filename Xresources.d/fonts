@@ -1,4 +1,4 @@
-*font: xft:DejaVuSansMono Nerd Font Mono:pixelsize=11
+*font: xft:DejaVuSansMono Nerd Font:pixelsize=12
 xft*antialias: true
 xft*hinting: true
 xft*hintstyle: hintfull
