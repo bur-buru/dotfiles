@@ -1,6 +1,0 @@
-! Burburu ~/.Xresources
-#include "/home/burburu/.Xresources.d/xscreensaver"
-#include "/home/burburu/.Xresources.d/colors"
-#include "/home/burburu/.Xresources.d/fonts"
-#include "/home/burburu/.Xresources.d/xterm"
-#include "/home/burburu/.Xresources.d/rxvt-unicode"

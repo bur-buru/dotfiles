@@ -1,0 +1,8 @@
+! Burburu ~/.Xresources
+
+#include "/home/dev/.Xresources.d/cursor"
+#include "/home/dev/.Xresources.d/colors"
+#include "/home/dev/.Xresources.d/rxvt-unicode"
+#include "/home/dev/.Xresources.d/xterm"
+#include "/home/dev/.Xresources.d/fonts"
+#include "/home/dev/.Xresources.d/xscreensaver"
