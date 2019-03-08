@@ -1,6 +1,8 @@
-*font: xft:DejaVuSansMono Nerd Font:pixelsize=12
-xft*antialias: true
-xft*hinting: true
-xft*hintstyle: hintfull
-xft*dpi: 96
-xft*rgba: rgb
+!*font          : xft:DejaVuSansMono Nerd Font:style=Book:size=9
+Xft.lcdfilter   : lcddefault
+Xft.hintstyle   : hintslight
+Xft.hinting     : 1
+Xft.autohint    : 1
+Xft.antialias   : 1
+Xft.dpi         : 96
+Xft.rgba        : rgb

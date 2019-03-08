@@ -1,12 +1,24 @@
-XTerm.vt100.locale: true
-XTerm.vt100.metaSendsEscape: true
-XTerm.vt100.backarrowKey: false
-XTerm.ttyModes: erase ^?
-XTerm.vt100.translations: #override \n\
-    Ctrl <Key>M: maximize() \n\
-    Ctrl <Key>R: restore()
-XTerm.vt100.saveLines: 4096
-XTerm.vt100.scrollBar: false
-XTerm.vt100.scrollbar.width: 8
-XTerm.vt100.geometry: 80x22
-XTerm.vt100.selectToClipboard: true
+XTerm.termName			    : xterm-256color
+XTerm.vt100.locale		    : true
+XTerm*utf8			    : 1
+
+XTerm.vt100.metaSendsEscape	    : true
+XTerm.vt100.backarrowKey	    : false
+XTerm.ttyModes                      : erase ^?
+XTerm.vt100.translations	    : #override \n\
+    				              Ctrl <Key>M: maximize() \n\
+    				              Ctrl <Key>R: restore()
+XTerm.vt100.saveLines		    : 4096
+XTerm.vt100.scrollBar		    : false
+XTerm.vt100.scrollbar.width	    : 8
+XTerm.vt100.selectToClipboard	    : true
+XTerm.vt100.reverseVideo	    : false
+XTerm.vt100.bellIsUrgent	    : true
+
+! start with TrueType fonts disabled
+XTerm.vt100.renderFont		    : true 
+
+XTerm.vt100.faceName		    : DejaVuSansMono Nerd Font:style=Book:antialias=true
+XTerm.vt100.faceNameDoublesize	    : DejaVuSansMono Bold Italic Nerd Font:style=Book:antialias=true
+XTerm.vt100.faceSize		    : 9 
+XTerm.scaleHeight		        : 1
