@@ -21,4 +21,4 @@ XTerm.vt100.renderFont		    : true
 XTerm.vt100.faceName		    : DejaVuSansMono Nerd Font:style=Book:antialias=true
 XTerm.vt100.faceNameDoublesize	    : DejaVuSansMono Bold Italic Nerd Font:style=Book:antialias=true
 XTerm.vt100.faceSize		    : 9 
-XTerm.scaleHeight		        : 1
+XTerm.scaleHeight		    : 1

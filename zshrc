@@ -37,18 +37,20 @@ source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 #==============================================================================
 #		    Customise the Powerlevel9k prompts
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-  os_icon
   ssh
+  os_icon
+  host
   dir
   vcs
   newline
+  user
   custom_user
 )
 
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-  status
   dir_writable
   battery
+  status
 )
 POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\ue0b4'
 POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\ue0b6'
@@ -57,7 +59,7 @@ POWERLEVEL9K_CUSTOM_USER="echo -n '\ufb8a'"
 #==============================================================================
 #		          User & Host Display
 #artii "$USER @ $HOST =>" --font ogre | lolcat
-echo $USER "@" $HOST
+#echo $USER "@" $HOST
 
 ### MUST BE LAST!!! ??? ###
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
