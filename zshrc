@@ -63,3 +63,5 @@ POWERLEVEL9K_CUSTOM_USER="echo -n '\ufb8a'"
 
 ### MUST BE LAST!!! ??? ###
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
