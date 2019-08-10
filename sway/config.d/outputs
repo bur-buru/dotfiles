@@ -1,0 +1,10 @@
+### Output configuration
+# get outputs with: swaymsg -t get_outputs
+
+# Set wallpaper
+output * bg ~/.config/wallpaper fill
+
+# Screens
+output LVDS-1 resolution 1366x768 position 0,0
+#output HDMI-A-1 resolution 1920x1080 position 1366,0
+

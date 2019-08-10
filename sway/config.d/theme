@@ -1,0 +1,48 @@
+# Theme settings for Borders, Xresources & GTK
+default_border pixel 2
+default_floating_border pixel 2
+
+# X-resources
+exec xrdb -load ~/.Xresources
+exec xrdb -load ~/.Xdefaults
+
+### GTK+
+# method 1
+set $gnome-schema org.gnome.desktop.interface
+
+#exec_always {
+#    gsettings set $gnome-schema gtk-theme ''
+#    gsettings set $gnome-schema icon-theme ''
+#    gsettings set $gnome-schema cursor-theme ''
+#}
+
+# method 2
+# call a script to pull settings from 'GTK+ settings.ini'
+# see .config/scripts/gtk-settings.sh
+
+# method 3
+#exec_always import-gsettings \
+#    gtk-theme:gtk-theme-name \
+#    icon-theme:gtk-icon-theme-name \
+#    cursor-theme:gtk-cursor-theme-name
+
+### End GTK
+#
+gaps outer 3
+gaps inner 3
+smart_gaps on
+
+set $bg 	   #d65d0e
+set $bg-inactive   #323232
+set $bg-urgent     #000000
+set $text          #eeeeec
+set $text-inactive #babdb6
+
+set $bar           #323232
+set $statusline    #e0e0e0
+
+client.focused          $bg           $bg          $text          $bg $bg
+client.unfocused        $bg-inactive  $bg-inactive $text-inactive $bar $bar
+client.focused_inactive $bg-inactive  $bg-inactive $text-inactive $bar $bar
+client.urgent           $bg-urgent    $bg-urgent   $text          $bar $bar
+ 

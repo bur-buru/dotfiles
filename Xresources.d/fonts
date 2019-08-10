@@ -1,4 +1,5 @@
 !*font          : xft:DejaVuSansMono Nerd Font:style=Book:size=9
+*font		: xft:Font Awesome 5 Brands:size=9
 Xft.lcdfilter   : lcddefault
 Xft.hintstyle   : hintslight
 Xft.hinting     : 1
