@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 # This file creates symlinks for "dotfiles" in home folder
 echo "**************************"
 echo "*** Creating symlinks! ***"
