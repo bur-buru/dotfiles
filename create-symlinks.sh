@@ -9,7 +9,7 @@ ln -s ~/dotfiles/hushlogin ~/.hushlogin
 
 # Terminal Configs
 ln -s ~/dotfiles/bashrc ~/.bashrc
-ln -s ~/dotfiles/zshrc ~/.zshrc
+#ln -s ~/dotfiles/zshrc ~/.zshrc
 
 # Termite
 
@@ -25,3 +25,4 @@ ln -s ~/dotfiles/waybar ~/.config/waybar
 # Xorg resources
 ln -s ~/dotfiles/Xresources.d ~/.Xresources.d
 ln -s ~/dotfiles/Xresources.d/Xresources ~/.Xresources
+ln -s ~/dotfiles/Xresources.d/Xresources ~/.Xdefaults

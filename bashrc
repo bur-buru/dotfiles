@@ -28,8 +28,15 @@ export LC_ALL=en_US.UTF-8
 export HISTCONTROL=ignoredups
 
 # User bin folders
-export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/bin/twitch:$PATH"
+#export PATH="$HOME/bin:$PATH"
+#export PATH="$HOME/bin/twitch:$PATH"
+
+# If user ID is greater than or equal to 1000 & if ~/bin exists and is a directory & if ~/bin is not already in your $PATH
+# then export ~/bin to your $PATH.
+if [[ $UID -ge 1000 && -d $HOME/bin && -z $(echo $PATH | grep -o $HOME/bin) ]]
+then
+    export PATH="${PATH}:$HOME/bin"
+fi
 
 # Files to source
 source /usr/share/fzf/key-bindings.bash
@@ -60,7 +67,7 @@ alias streamlink='streamlink -p mpv'
 
 # Pacman
 alias update="sudo pacman -Syu"
-alias install="sudo pacman -Syu $()"
+#alias install="sudo pacman -Syu " 
 
 # visual studio
 alias code="codium"
@@ -79,3 +86,6 @@ alias pingy="ping -c 3 google.com"
 
 # Try to keep environment pollution down, EPA loves us.
 unset use_color sh
+
+# import enviornment
+systemctl --user import-environment
