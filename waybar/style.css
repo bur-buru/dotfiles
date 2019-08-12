@@ -9,7 +9,7 @@
 
 window#waybar {
 	background-color: #282828;
-	color: #949494;
+	color: gray;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -52,7 +52,7 @@ window#waybar {
 
 #cpu {
     background: #4e4e4e;
-    color:  orangered;
+    color:  orange;
     text-shadow: 0.1em 0.1em 0.15em black;
 }
 
@@ -64,8 +64,8 @@ window#waybar {
 
 #clock.2 {
     background: #4e4e4e;
-    color: #000000;
-    text-shadow: 0.1em 0.1em 0.15em gray;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.15em black;
 }
 
 #network.disconnected {
@@ -74,7 +74,7 @@ window#waybar {
 
 #pulseaudio {
     background: #3a3a3a;
-    color: rgb(114, 114, 226);
+    color: rgb(196, 27, 196);
     text-shadow: 0.1em 0.1em 0.15em black;
 }
 

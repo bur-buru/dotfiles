@@ -1,6 +1,7 @@
 <h1>Dotfiles</h1>
 <p>Contains: </p>
   <ul>
+    <li>Symlink.sh</li>
     <li>Silence Login Messages</li>
     <li>User Dirs</li>
     <li>Shell Configs</li>
