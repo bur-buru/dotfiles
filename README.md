@@ -1,6 +1,4 @@
-<link rel="stylesheet" type="text/css" href="https://magicpuddle.netlify.com/main.css">
-
-<h1>dotfiles</h1>
+<h1>Dotfiles</h1>
 <p>Contains: </p>
   <ul>
     <li>Silence Login Messages</li>
