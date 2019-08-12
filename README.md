@@ -4,9 +4,17 @@
 <h1>dotfiles</h1>
 <p>Contains: </p>
   <ul>
-    <li>Shell configs</li>
-    <li>.config</li>
-    <li>swaywm and waybar</li>
-    <li>Xresources</li>
+    <li>Silence Login Messages</li>
+    <li>User Dirs</li>
+    <li>Shell Configs</li>
+    <li>Sway</li>
+    <li>Xorg resources</li>
+    <li>Themes, Fonts, Icons</li>
+    <li>Termite</li>
     <li>Vim</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
   </ul>
