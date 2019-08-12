@@ -1,10 +1,4 @@
-<h1>dotfiles of the gods</h1>
+<h1>dotfiles</h1>
 
-clone repo to: <br>
-<code>
-  ~/git/dotfiles
-</code><br>
-exec:<br>
-<code>
-  ./create-symlinks.sh
-</code>
+<p>clone repo to: <code>~/dotfiles</code><br></p>
+<p>exec: <code>./symlinks.sh</code></p>
