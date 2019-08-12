@@ -1,5 +1,4 @@
-<p>clone: <code>cd && git clone https://github.com/bur-buru/dotfiles.git</code><br></p>
-<p>exec: <code>cd ~/dotfiles && ./symlinks.sh</code></p>
+<link rel="stylesheet" type="text/css" href="https://magicpuddle.netlify.com/main.css">
 
 <h1>dotfiles</h1>
 <p>Contains: </p>
@@ -13,3 +12,7 @@
     <li>Termite</li>
     <li>Vim</li>
   </ul>
+
+<h1>Install</h1>
+<p>clone: <code>cd && git clone https://github.com/bur-buru/dotfiles.git</code><br></p>
+<p>exec: <code>cd ~/dotfiles && ./symlinks.sh</code></p>
