@@ -11,14 +11,25 @@
      "sway/workspaces": {
          "disable-scroll": true,
          "all-outputs": false,
-         "format": "{name}"
+         "format":"{icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+             "6": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
      },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "tray": {
-	//"icon-size": 21,
-        "spacing": 10
+	    "icon-size": 14,
+        "spacing": 5
     },
     "clock#1": {
         "tooltip-format": "{:%Y-%m-%d | %H:%M}"

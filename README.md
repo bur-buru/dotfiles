@@ -5,6 +5,7 @@
     <li>User Dirs</li>
     <li>Shell Configs</li>
     <li>Sway</li>
+    <li>Waybar</li>
     <li>Xorg resources</li>
     <li>Themes, Fonts, Icons</li>
     <li>Termite</li>
