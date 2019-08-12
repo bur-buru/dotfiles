@@ -12,9 +12,4 @@
     <li>Themes, Fonts, Icons</li>
     <li>Termite</li>
     <li>Vim</li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
   </ul>
