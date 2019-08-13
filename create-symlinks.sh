@@ -18,7 +18,10 @@ ln -s ~/dotfiles/zshrc ~/.zshrc
 # Sway
 ln -s ~/dotfiles/sway ~/.config/sway
 ln -s ~/dotfiles/waybar ~/.config/waybar
-ln -s ~/dotfiles/swaylock ~/.config/swaylock
+
+# Swaylock
+ln -s ~/dotfiles/sway/swaylock ~/.config/swaylock
+
 
 # Xorg resources
 ln -s ~/dotfiles/Xresources.d ~/.Xresources.d
