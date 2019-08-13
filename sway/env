@@ -6,4 +6,15 @@ QT_WAYLAND_FORCE_DPI=physical
 QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 ECORE_EVAS_ENGINE=wayland_egl
 ELM_ENGINE=wayland_egl
-MOZ_ENABLE_WAYLAND=1
+# MOZ_ENABLE_WAYLAND=1
+
+GDK_BACKEND=wayland
+
+# Tray
+XDG_CURRENT_DESKTOP=sway
+
+# Launcher
+BEMENU_BACKEND=wayland
+
+# sway socks
+SWAYSOCK=/run/user/$(id -u)/sway-ipc.$(id -u).$(pgrep -x sway).sock

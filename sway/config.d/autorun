@@ -1,6 +1,2 @@
-exec xrdb ~/.Xresources
+#exec xrdb ~/.Xdefaults
 exec --no-startup-id mako
-exec --no-startup-id chrome 
-
-
-for_window [app_id="weechat"] floating enable
