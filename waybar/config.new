@@ -1,7 +1,6 @@
-{
-    "layer": "bottom",
-    "position": "bottom",
-    "height": 26,
+
+sition": "top",
+    "height": 35,
     "modules-left": ["sway/workspaces", "sway/mode"],
     // "modules-center": ["custom/media"],
     "modules-center": ["clock"],

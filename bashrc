@@ -84,8 +84,20 @@ alias wifi="sudo wpa_supplicant -B -i wlp1s0 -c /etc/wpa_supplicant/wpa_supplica
 #ping
 alias pingy="ping -c 3 google.com"
 
+# firefox
+alias firefox="MOZ_ENABLE_WAYLAND=1 firefox &"
+
 # Try to keep environment pollution down, EPA loves us.
 unset use_color sh
 
 # import enviornment
 systemctl --user import-environment
+
+#pgp 
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+	  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
+
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
