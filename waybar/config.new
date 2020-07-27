@@ -1,5 +1,6 @@
-
-sition": "top",
+{
+    "layer": "top", // Waybar at tmop layer
+    "position": "top",
     "height": 35,
     "modules-left": ["sway/workspaces", "sway/mode"],
     // "modules-center": ["custom/media"],
