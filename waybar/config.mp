@@ -84,7 +84,7 @@
         "exec": "echo $(mpc current) – $(mpc status | awk '{print $3}' | sed -n 2p)",
         "exec-if": "pgrep mpd",
         "on-click-right": "mpc toggle",
-        "on-click": "termite -e ncmpcpp"
+        "on-click": "$term -e ncmpcpp"
     },
 	"custom/arrow1": {
 		"format": ""

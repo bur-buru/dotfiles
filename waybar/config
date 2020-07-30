@@ -1,91 +1,138 @@
 {
-    "layer": "bottom",
-    "position": "bottom",
-    "height": 26,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    // "modules-center": ["custom/media"],
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    // "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces","custom/arrow6", "sway/mode" ],
     "modules-center": ["clock"],
-    // "modules-right": ["tray", "idle_inhibitor", "custom/weather", "pulseaudio", "network", "temperature", "custom/cpu_speed", "battery", "custom/powermenu"],
-    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "temperature", "custom/cpu_speed", "battery", "custom/powermenu"],
+    "modules-right": ["custom/arrow5", "idle_inhibitor", "custom/arrow4", "pulseaudio", "custom/arrow5", "network", "custom/arrow4", "cpu","custom/arrow3", "memory", "custom/arrow5", "backlight", "custom/arrow5", "battery", "battery#bat2", "tray", "custom/arrow2"],
+    // Modules configuration
+       "sway/workspaces": {
+        "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{name}: {icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+             "6": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+     },
     "sway/mode": {
-        "format": " {}"
+        "format": "<span style=\"italic\">{}</span>"
     },
-    "sway/workspaces": {
-        "format": "{name}",
-        "disable-scroll": true
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
     },
-    "sway/window": {
-        "max-length": 80,
-        "tooltip": false
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
     },
     "clock": {
-        "format": "{:%a %d %b - %H:%M}",
-        "tooltip": false,
-        "on-click": "gnome-calendar"
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
     },
-    "custom/cpu_speed": {
-        "interval": 5,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/cpu_speed.sh",
-        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {}",
-        "format-icons": [""],
-        "escape": true,
-        "on-click": "terminator -e htop"
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": true
     },
-    "custom/powermenu": {
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/powermenu.sh",
-        "format": "<span font='Font Awesome 5 Free 9'>{icon}</span>  {}",
-        "format-icons": [""],
-        "interval": 3600,
-        "escape": true,
-        "on-click": "~/sway/scripts/wofi-power.sh"
+    "memory": {
+        "format": "{}% "
+	// "on-click": "termite -e htop"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
     },
     "battery": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
-        "format-icons": ["", "", "", "", ""],
-        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
-        "format-full":  "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - Charged",
-        "interval": 30,
         "states": {
-            "warning": 25,
-            "critical": 10
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
         },
-        "tooltip": false,
-        "on-click": "gnome-power-statistics"
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
     },
     "network": {
-        "format": "{icon}",
-        "format-alt": "{ipaddr}/{cidr} {icon}",
-        "format-alt-click": "click-right",
-        "format-wifi": "<span font='Font Awesome 5 Free 10'></span>  {essid} ({signalStrength}%)",
-        "format-ethernet": " {ifname}",
-        "format-disconnected": "⚠ Disconnected",
-        "on-click": "terminator -e ~/sway/scripts/network-manager",
-        // "on-click": "gnome-control-center wifi",
-        "tooltip": false
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
-        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span> {volume:4}%",
-        "format-alt-click": "click-right",
-        "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
         "format-icons": {
-            "phone": [" ", " ", " ", " "],
-            "default": ["", "", "", ""]
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
         },
-        "scroll-step": 2,
-        "on-click": "gnome-control-center sound",
-        //"on-click": "pavucontrol",
-        "tooltip": false
-    },
-    "custom/spotify": {
-        "interval": 5,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/spotify.sh",
-        "exec-if": "pgrep spotify",
-        "on-click": "playerctl play-pause",
-        "escape": true
+        "on-click": "pavucontrol"
     },
     "custom/media": {
         "format": "{icon} {}",
@@ -96,71 +143,26 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/modules/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-    "custom/storage": {
-        "format": "{} ",
-        "format-alt": "{percentage}% ",
-        "format-alt-click": "click-right",
-        "return-type": "json",
-        "interval": 60,
-        "exec": "~/.config/waybar/modules/storage.sh"
+
+    "custom/arrow1": {
+            "format": ""
     },
-    "backlight": {
-        "format": "{icon}",
-        "format-alt": "{percent}% {icon}",
-        "format-alt-click": "click-right",
-        "format-icons": ["", ""],
-        "on-scroll-down": "light -A 1",
-        "on-scroll-up": "light -U 1"
+    "custom/arrow3": {
+            "format": ""
     },
-    "temperature": {
-        "format": "<span font='Font Awesome 5 Free 9'></span> {temperatureC:3}°C",
-        //"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
-        "hwmon-path": "/sys/class/thermal/thermal_zone10/temp",
-        //"on-click": "terminator -e 'watch -n1 sensors'"
-        "on-click": "psensor"
+    "custom/arrow4": {
+            "format": ""
     },
-    "custom/weather": {
-        "format": "{}",
-        "format-alt": "{alt}: {}",
-        "format-alt-click": "click-right",
-        "interval": 1800,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/weather.sh",
-        "exec-if": "ping wttr.in -c1",
-        // "on-click": "terminator -p Small -e 'bash -c \"curl -s https://en.wttr.in; read line\"'"
-        "on-click": "gnome-weather"
+    "custom/arrow5": {
+            "format": ""
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-alt": "{icon} idle {status}",
-        "format-alt-click": "click-right",
-        "format-icons": {
-            "activated": "<span font='Font Awesome 5 Free 9'></span>",
-            "deactivated": "<span font='Font Awesome 5 Free 9'></span>"
-        },
-        "tooltip": false
+    "custom/arrow6": {
+            "format": ""
     },
-    "custom/mail": {
-        "format": "",
-        "format-alt": "{alt} ",
-        "format-alt-click": "click-right",
-        "interval": 60,
-        "return-type": "json",
-        "exec": "~/.config/waybar/modules/mail.py",
-        "tooltip": false
-    },
-    "custom/test": {
-        "format": "{}",
-        "exec": "/tmp/test blub",
-        "param": "blah",
-        "interval": 5
-    },
-    "tray": {
-        "icon-size": 18,
-        "spacing": 18
+    "custom/arrow2": {
+            "format": ""
     }
 }
-
