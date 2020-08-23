@@ -4,6 +4,9 @@ echo "**************************"
 echo "*** Creating symlinks! ***"
 echo "**************************"
 
+# make .config folder
+mkdir ~/.config
+
 # Silence Login Messages
 ln -sf ~/dotfiles/hushlogin ~/.hushlogin
 
