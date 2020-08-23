@@ -21,6 +21,7 @@ ln -sf ~/dotfiles/zshrc ~/.zshrc
 # Sway
 ln -sf ~/dotfiles/sway ~/.config/sway
 ln -sf ~/dotfiles/waybar ~/.config/waybar
+ln -sf ~/dotfiles/wallpaper.jpg ~/.config/wallpaper
 
 # Swaylock
 ln -sf ~/dotfiles/sway/swaylock ~/.config/swaylock
