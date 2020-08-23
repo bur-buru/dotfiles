@@ -12,7 +12,7 @@ ln -sf ~/dotfiles/hushlogin ~/.hushlogin
 
 # User Dirs
 ln -sf ~/dotfiles/user-dirs.dirs ~/.config/user-dirs.dirs
-ln -sf ~dotfiles/user-dirs.locale ~/.config/user-dirs.locale
+ln -sf ~/dotfiles/user-dirs.locale ~/.config/user-dirs.locale
 
 # Shell Configs
 ln -sf ~/dotfiles/bashrc ~/.bashrc
